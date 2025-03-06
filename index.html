@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks Partner Tips Distribution</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Starbucks Partner Tips Distribution</h1>
+    <input type="file" id="imageUpload" accept="image/*">
+    <button id="processImage">Process Image</button>
+    <div id="loading" style="display:none;">Processing...</div>
+    <div id="tableContainer">
+      <table id="tipsTable">
+        <thead>
+          <tr>
+            <th>Partner Name</th>
+            <th>Partner Number</th>
+            <th>Total Tippable Hours</th>
+            <th>Tip Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div id="totalHours">Total Tippable Hours: <span id="totalHoursValue">0</span></div>
+    <div id="tipCalculation">
+      <label for="totalWeeklyDollars">Total Weekly Dollars:</label>
+      <input type="number" id="totalWeeklyDollars" name="totalWeeklyDollars">
+      <button id="calculateTips">Calculate Tips</button>
+    </div>
+  </div>
+  <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
